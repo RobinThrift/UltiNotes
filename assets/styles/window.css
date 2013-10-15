@@ -48,3 +48,13 @@ body {
     background: none;
     border: none;
 }
+
+#window-header .dropdown {
+    display: inline-block;
+}
+
+#window-header .dropdown-menu {
+    right: 0;
+    left: auto;
+    padding-left: 8px;
+}
