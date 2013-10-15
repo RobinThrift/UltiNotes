@@ -3,8 +3,10 @@
     <head>
         <title>UltiNotes</title>
         <link rel="stylesheet" href="assets/styles/bootstrap/bootstrap.css">
+
         <link rel="stylesheet" href="assets/styles/window.css">
 
+        <link rel="stylesheet" href="assets/styles/fonts.css">
         <link rel="stylesheet" href="assets/styles/editor.css">
 
 
@@ -39,13 +41,29 @@
                     <button class="btn btn-default btn sm"><span class="glyphicon glyphicon-comment"></span></button>
                 </div>
 
-                <button class="btn btn-sm btn-default close-window-btn"><span class="glyphicon glyphicon-cog"></span></button>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li class="dropdown-header">Font</li>
+                        <li>
+                            <select id="font-selector">
+                                <option value="droidserif">DroidSerif</option>
+                                <option value="chunkfive">ChunkFive</option>
+                                <option value="sourcesanspro">SourceSansPro</option>
+                                <option value="titillium">Titillium</option>
+                                <option value="helvetica">Helvetica</option>
+                            </select>
+                        </li>
+                        <li class="divider"></li>
+                    </ul>
+                </div>
             </div>
         </header>
         
 
         <div id="app-body">
-            <textarea id="main-editor"></textarea>
+            <textarea id="main-editor" class="droidserif"></textarea>
         </div>
         
 

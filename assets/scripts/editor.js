@@ -2,16 +2,17 @@ $(function() {
 
     // setup the editor
     var $txtField = $('#main-editor'),
-        editor = new Behave({
-        textarea: $txtField[0],
-        replaceTab: true,
-        softTabs: true,
-        tabSize: 4,
-        autoOpen: true,
-        overwrite: true,
-        autoStrip: true,
-        autoIndent: true,
-    });
+            editor = new Behave({
+            textarea: $txtField[0],
+            replaceTab: true,
+            softTabs: true,
+            tabSize: 4,
+            autoOpen: true,
+            overwrite: true,
+            autoStrip: true,
+            autoIndent: true,
+        }),
+        currFont = 'droidserif';
 
     // setup the heigth and resize on resize event
     function setTxtFieldHeight() {
@@ -22,4 +23,17 @@ $(function() {
 
 
     setTxtFieldHeight();
+
+
+    // change the font
+    $('#font-selector').on('change', function() {
+
+        $txtField.removeClass(currFont);
+
+        currFont = this.value;
+
+        $txtField.addClass(currFont);
+
+    });
+
 });

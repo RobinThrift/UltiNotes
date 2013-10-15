@@ -1,0 +1,45 @@
+
+@font-face { 
+    font-family: 'ChunkFive';
+    src: url('../fonts/editor/ChunkFive/ChunkFive.otf');
+}
+
+.chunckfive {
+    font-family: 'ChunkFive';
+}
+
+
+
+@font-face { 
+    font-family: 'DroidSerif';
+    src: url('../fonts/editor/droid-serif/DroidSerif.ttf');
+}
+
+.droidserif {
+    font-family: 'DroidSerif';
+}
+
+
+@font-face { 
+    font-family: 'SourceSansPro';
+    src: url('../fonts/editor/source-sans-pro/SourceSansPro-Regular.otf');
+}
+
+.sourcesanspro {
+    font-family: 'SourceSansPro';
+}
+
+
+@font-face { 
+    font-family: 'Titillium';
+    src: url('../fonts/editor/Titillium/Titillium-Regular.otf');
+}
+
+.titillium {
+    font-family: 'Titillium';
+}
+
+
+.helvetica {
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
