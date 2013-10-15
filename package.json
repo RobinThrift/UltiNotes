@@ -1,0 +1,21 @@
+{
+    "name": "UltiNotes",
+    "main": "index.html",
+    "version": "0.0.1",
+    "window": {
+        "title": "UltiNotes",
+        "toolbar": false,
+        "frame": false,
+        "width": 1000,
+        "height": 750
+    },
+    "webkit": {
+        "plugin": true
+    },
+    
+    "dependencies": {
+        "marked": ">=0.2.9",
+        "highlight.js": "7.3.*",
+        "lodash": "2.*"
+    }
+}

@@ -1,0 +1,50 @@
+/* make window draggable */
+body {
+    -webkit-app-region: drag;
+}
+
+
+/* WINDOW HEADER */
+#window-header {
+    margin: 0;
+    height: 40px;
+    background: #5ca2ca;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+
+#window-header h1 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    color: #fbfbfb;
+    cursor: default;
+}
+
+#window-header small {
+    color: #fbfbfb;
+    font-size: 10px;
+}
+
+.window-control-buttons {
+    position: absolute;
+    height: 45px;
+    top: 5px;
+    left: 5px;
+}
+
+.window-app-buttons {
+    position: absolute;
+    height: 45px;
+    top: 5px;
+    right: 5px;
+}
+
+
+#window-header .btn {
+    background: none;
+    border: none;
+}
