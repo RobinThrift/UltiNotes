@@ -1,0 +1,23 @@
+
+
+#main-editor {
+    border: 0;
+    resize: none;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    font-size: 18px;
+    font-family: serif; 
+    -webkit-appearance: none;
+}
+
+#main-editor:focus {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+textarea, textarea:focus {
+    -webkit-appearance: none;
+}
