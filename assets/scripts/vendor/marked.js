@@ -448,6 +448,7 @@ var inline = {
   link: /^!?\[(inside)\]\(href\)/,
   reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
   nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
+  underline: /^_\*([\s\S]+?)\*_(?!_)/,
   strong: /^__([\s\S]+?)__(?!_)|^\*\*([\s\S]+?)\*\*(?!\*)/,
   em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
   code: /^(`+)\s*([\s\S]*?[^`])\s*\1(?!`)/,
@@ -638,6 +639,15 @@ InlineLexer.prototype.output = function(src) {
       out += '<strong>'
         + this.output(cap[2] || cap[1])
         + '</strong>';
+      continue;
+    }
+
+    // underlining
+    if (cap = this.rules.underline.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += '<span style="text-decoration:underline">'
+        + this.output(cap[2] || cap[1])
+        + '</span>';
       continue;
     }
 
