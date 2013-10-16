@@ -12,10 +12,8 @@
     "webkit": {
         "plugin": true
     },
-    
+
     "dependencies": {
-        "marked": ">=0.2.9",
-        "highlight.js": "7.3.*",
         "lodash": "2.*"
     }
 }
