@@ -4,7 +4,7 @@ var gui = require('nw.gui');
 marked.setOptions({
     gfm: true,
     highlight: function (code, lang) {
-        return hljs.highlightAuto(lang, code).value;
+        return hljs.highlight(lang, code).value;
     },
     tables: true,
     breaks: true,
