@@ -13,6 +13,8 @@
 var block = {
   newline: /^\n+/,
   code: /^( {4}[^\n]+\n*)+/,
+  inlineMath: /^(\$)([\s\S]+)(\$)/,
+  blockMath: /^(\${2}\n{1,})([\s\S]+)(\n{1,}\${2})/,
   fences: noop,
   hr: /^( *[-*_]){3,} *(?:\n+|$)/,
   heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n+|$)/,
@@ -162,6 +164,36 @@ Lexer.prototype.token = function(src, top) {
           type: 'space'
         });
       }
+    }
+
+
+    // inlineMath
+    if (cap = this.rules.inlineMath.exec(src)) {
+      src = src.substring(cap[0].length);
+
+      var mathHTML = mathParser(cap[2]);
+
+      this.tokens.push({
+        type: 'html',
+        text: mathHTML
+      });
+      continue;
+    }
+
+
+    // blockMath
+    if (cap = this.rules.blockMath.exec(src)) {
+      src = src.substring(cap[0].length);
+
+      var mathHTML = mathParser(cap[2]);
+
+      mathHTML = '<div style="display: inline-block">' + mathHTML + '</div>';
+
+      this.tokens.push({
+        type: 'html',
+        text: mathHTML
+      });
+      continue;
     }
 
     // code
