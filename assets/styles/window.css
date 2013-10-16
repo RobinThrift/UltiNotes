@@ -1,6 +1,6 @@
 /* make window draggable */
 body {
-    -webkit-app-region: drag;
+    overflow: hidden;
 }
 
 
@@ -11,6 +11,7 @@ body {
     background: #5ca2ca;
     position: relative;
     -webkit-user-select: none;
+    -webkit-app-region: drag;
 }
 
 
