@@ -10,6 +10,11 @@
         <link rel="stylesheet" href="assets/styles/editor.css">
 
 
+        <link rel="stylesheet" href="assets/styles/code/solarized_dark.css">
+        <link rel="stylesheet" href="assets/styles/preview.css">
+
+        
+
         <script>
             window.addEventListener('keydown', function (e) {
                 if (e.keyIdentifier === 'F5') {
@@ -32,13 +37,14 @@
             <div class="window-app-buttons">
                 
                 <div class="btn-group">
-                    <button class="btn btn-default btn sm"><span class="glyphicon glyphicon-folder-open"></span></button>
-                    <button class="btn btn-default btn sm"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                    <button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-folder-open"></span></button>
+                    <button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-floppy-disk"></span></button>
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn btn-default btn sm"><span class="glyphicon glyphicon-eye-open"></span></button>
-                    <button class="btn btn-default btn sm"><span class="glyphicon glyphicon-comment"></span></button>
+                    <button class="btn btn-default btn-sm show-preview-btn"><span class="glyphicon glyphicon-eye-open"></span></button>
+                    <button class="btn btn-default btn-sm show-editor-btn hidden"><span class="glyphicon glyphicon-pencil"></span></button>
+                    <button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-comment"></span></button>
                 </div>
 
                 <div class="dropdown">
@@ -64,6 +70,10 @@
 
         <div id="app-body">
             <textarea id="main-editor" class="droidserif"></textarea>
+
+            <div id="preview-window" class="droidserif"></div>
+
+            
         </div>
         
 
@@ -71,6 +81,13 @@
         <script src="assets/scripts/vendor/jquery-2.0.3.min.js"></script>
         <script src="assets/scripts/vendor/bootstrap/bootstrap.js"></script>
         <script src="assets/scripts/window.js"></script>
+
+
+        <script src="assets/scripts/vendor/highlight.js"></script>
+        <script src="assets/scripts/vendor/marked.js"></script>
+        <script src="assets/scripts/vendor/jqmath/jscurry-0.3.0.js"></script>
+        <script src="assets/scripts/vendor/jqmath/jqmath-0.4.0.js"></script>
+        <script src="assets/scripts/parser.js"></script>
 
         <script src="assets/scripts/vendor/behave.js"></script>
         <script src="assets/scripts/vendor/jquery.smartresize.js"></script>
